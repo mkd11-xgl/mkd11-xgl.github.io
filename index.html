@@ -7,34 +7,34 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        /* 去掉Logo旁边的圈 */
+        /* 去掉画面中心的竖线 */
         #header .logo {
-            display: none; /* 使logo图标隐藏 */
+            display: none;
         }
 
-        /* 去掉导航栏的竖线 */
+        #bg {
+            display: none;
+        }
+
+        /* 去掉中间的竖线 */
+        #intro, #work, #contact {
+            border-left: none;
+        }
+
+        /* 右侧logo居中 */
+        #header .logo img {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* 去掉竖线 */
         #header nav ul li {
-            border: none; /* 去掉每个导航项的竖线 */
+            border: none;
         }
 
-        /* 如果你不需要导航背景的下划线或边框，也可以去掉 */
-        #header {
-            border-bottom: none;
-        }
-
-        /* 二级菜单的样式 */
-        .submenu {
-            list-style: none;
-            padding: 0;
-        }
-
-        .submenu li {
-            padding: 5px 0;
-        }
-
-        .submenu a {
-            text-decoration: none;
-            color: #333;
+        /* 导航栏背景色 */
+        nav {
+            background-color: transparent;
         }
     </style>
 </head>
@@ -46,7 +46,7 @@
         <!-- Header -->
         <header id="header">
             <div class="logo">
-                <span class="icon fa-gem"></span>
+                <img src="images/logo.png" alt="调色匠涂料 Logo" />
             </div>
             <div class="content">
                 <div class="inner">
@@ -57,15 +57,7 @@
             <nav>
                 <ul>
                     <li><a href="#intro">公司简介</a></li>
-                    <li><a href="#work">产品介绍</a>
-                        <!-- 二级菜单 -->
-                        <ul class="submenu">
-                            <li><a href="#work1">仿古拉丝</a></li>
-                            <li><a href="#work2">聚酯</a></li>
-                            <li><a href="#work3">光油</a></li>
-                            <li><a href="#work4">仿电镀</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="products.html">产品介绍</a></li> <!-- 一级菜单：产品介绍 -->
                     <li><a href="#contact">联系方式</a></li>
                 </ul>
             </nav>
@@ -73,47 +65,43 @@
 
         <!-- Main -->
         <div id="main">
-            <article id="intro">
-                <h2 class="major">公司简介</h2>
-                <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-                <p>我们位于涂料之乡美誉的广东顺德，拥有工业漆技术研发、生产、质控、销售与技术服务队伍。产品质量稳定，服务周到，检测设备先进。主要生产智能锁漆、仿古艺术铜门漆及五金表面涂装。调色匠遵循诚信经营，稳健发展，品质稳定的经营理念，得到上下游客户广泛认可和信赖，并致力成为五金涂料喷涂行业的优秀供应商。</p>
-            </article>
 
-            <!-- Work -->
-            <article id="work">
+            <!-- 产品介绍页面 -->
+            <article id="products" style="display: none;">
                 <h2 class="major">产品介绍</h2>
-                <p>点击查看我们的各类产品介绍</p>
+                <p>请点击下面的产品类型进入详细介绍：</p>
                 <ul>
-                    <li id="work1"><h3>仿古拉丝</h3><p>仿古拉丝的详细描述与特点。</p></li>
-                    <li id="work2"><h3>聚酯</h3><p>聚酯涂料的详细介绍。</p></li>
-                    <li id="work3"><h3>光油</h3><p>光油的应用与优势。</p></li>
-                    <li id="work4"><h3>仿电镀</h3><p>仿电镀涂料的特点及用途。</p></li>
+                    <li><a href="仿古拉丝.html">仿古拉丝</a></li>
+                    <li><a href="聚酯.html">聚酯</a></li>
+                    <li><a href="光油.html">光油</a></li>
+                    <li><a href="仿电镀.html">仿电镀</a></li>
                 </ul>
             </article>
 
-            <article id="contact">
-                <h2 class="major">联系方式</h2>
-                <form method="post" action="#">
-                    <div class="fields">
-                        <div class="field half">
-                            <label for="name">姓名</label>
-                            <input type="text" name="name" id="name" />
-                        </div>
-                        <div class="field half">
-                            <label for="email">邮箱</label>
-                            <input type="text" name="email" id="email" />
-                        </div>
-                        <div class="field">
-                            <label for="message">留言</label>
-                            <textarea name="message" id="message" rows="4"></textarea>
-                        </div>
-                    </div>
-                    <ul class="actions">
-                        <li><input type="submit" value="发送留言" class="primary" /></li>
-                        <li><input type="reset" value="重置" /></li>
-                    </ul>
-                </form>
+            <!-- 仿古拉丝页面 -->
+            <article id="仿古拉丝" style="display: none;">
+                <h2 class="major">仿古拉丝</h2>
+                <p>这里是仿古拉丝的详细介绍。</p>
             </article>
+
+            <!-- 聚酯页面 -->
+            <article id="聚酯" style="display: none;">
+                <h2 class="major">聚酯</h2>
+                <p>这里是聚酯的详细介绍。</p>
+            </article>
+
+            <!-- 光油页面 -->
+            <article id="光油" style="display: none;">
+                <h2 class="major">光油</h2>
+                <p>这里是光油的详细介绍。</p>
+            </article>
+
+            <!-- 仿电镀页面 -->
+            <article id="仿电镀" style="display: none;">
+                <h2 class="major">仿电镀</h2>
+                <p>这里是仿电镀的详细介绍。</p>
+            </article>
+
         </div>
 
         <!-- Footer -->
@@ -122,6 +110,9 @@
         </footer>
 
     </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
