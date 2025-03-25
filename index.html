@@ -30,11 +30,37 @@
             z-index: -1;
         }
 
-        /* 删除所有边框 */
+        /* 重置所有边框、阴影、轮廓等 */
         * {
-            border: none !important; /* 移除所有边框 */
-            box-shadow: none !important; /* 移除所有阴影 */
+            margin: 0;
+            padding: 0;
+            border: none !important; /* 删除所有边框 */
+            outline: none !important; /* 删除所有轮廓 */
+            box-shadow: none !important; /* 删除所有阴影 */
+            text-decoration: none !important; /* 删除所有文本装饰 */
+            -webkit-appearance: none; /* 删除默认样式 */
+            -moz-appearance: none; /* 删除默认样式 */
         }
+
+        /* 额外的一些重置样式，防止不同浏览器带来的视觉差异 */
+        body {
+            overflow-x: hidden; /* 禁止横向滚动条 */
+        }
+
+        img {
+            display: block; /* 避免图片下方出现空白 */
+            max-width: 100%; /* 确保图片不超出容器宽度 */
+            height: auto;
+        }
+
+        ul {
+            list-style: none; /* 去除列表项符号 */
+        }
+
+        a {
+            text-decoration: none; /* 去除链接下划线 */
+        }
+
     </style>
 </head>
 <body class="is-preload">
