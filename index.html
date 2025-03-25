@@ -7,34 +7,27 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        /* 去掉画面中心的竖线 */
-        #header .logo {
-            display: none;
+        /* 设置logo */
+        #logo {
+            position: absolute;  /* 绝对定位 */
+            top: 50%;  /* 垂直居中 */
+            left: 50%;  /* 水平居中 */
+            transform: translate(-50%, -50%);  /* 精确居中 */
+            width: 150px;  /* 设置宽度 */
+            height: auto;  /* 自动调整高度，保持比例 */
         }
 
+        /* 调整页面背景 */
         #bg {
-            display: none;
-        }
-
-        /* 去掉中间的竖线 */
-        #intro, #work, #contact {
-            border-left: none;
-        }
-
-        /* 右侧logo居中 */
-        #header .logo img {
-            width: 60px;
-            height: 60px;
-        }
-
-        /* 去掉竖线 */
-        #header nav ul li {
-            border: none;
-        }
-
-        /* 导航栏背景色 */
-        nav {
-            background-color: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/25新 冰裂 无文字版.png'); /* 更改为您的图片路径 */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
         }
     </style>
 </head>
@@ -46,7 +39,7 @@
         <!-- Header -->
         <header id="header">
             <div class="logo">
-                <img src="images/logo.png" alt="调色匠涂料 Logo" />
+                <img id="logo" src="images/logo.png" alt="调色匠涂料 Logo" />
             </div>
             <div class="content">
                 <div class="inner">
@@ -57,7 +50,7 @@
             <nav>
                 <ul>
                     <li><a href="#intro">公司简介</a></li>
-                    <li><a href="products.html">产品介绍</a></li> <!-- 一级菜单：产品介绍 -->
+                    <li><a href="#work">产品介绍</a></li>
                     <li><a href="#contact">联系方式</a></li>
                 </ul>
             </nav>
@@ -66,40 +59,86 @@
         <!-- Main -->
         <div id="main">
 
-            <!-- 产品介绍页面 -->
-            <article id="products" style="display: none;">
+            <!-- Intro -->
+            <article id="intro">
+                <h2 class="major">公司简介</h2>
+                <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+                <p>我们位于涂料之乡美誉的广东顺德，拥有工业漆技术研发、生产、质控、销售与技术服务队伍。产品质量稳定，服务周到，检测设备先进。主要生产智能锁漆、仿古艺术铜门漆及五金表面涂装。调色匠遵循诚信经营，稳健发展，品质稳定的经营理念，得到上下游客户广泛认可和信赖，并致力成为五金涂料喷涂行业的优秀供应商。</p>
+            </article>
+
+            <!-- 产品介绍 -->
+            <article id="work">
                 <h2 class="major">产品介绍</h2>
-                <p>请点击下面的产品类型进入详细介绍：</p>
-                <ul>
-                    <li><a href="仿古拉丝.html">仿古拉丝</a></li>
-                    <li><a href="聚酯.html">聚酯</a></li>
-                    <li><a href="光油.html">光油</a></li>
-                    <li><a href="仿电镀.html">仿电镀</a></li>
+                <nav>
+                    <ul>
+                        <li><a href="#product1">仿古拉丝</a></li>
+                        <li><a href="#product2">聚酯</a></li>
+                        <li><a href="#product3">光油</a></li>
+                        <li><a href="#product4">仿电镀</a></li>
+                    </ul>
+                </nav>
+
+                <!-- 仿古拉丝 -->
+                <section id="product1">
+                    <h3>仿古拉丝</h3>
+                    <p>仿古拉丝是一种高端的金属表面处理效果，适用于五金制品的表面，能够实现经典的拉丝纹理效果。</p>
+                    <span class="image main"><img src="images/pic02.jpg" alt="仿古拉丝" /></span>
+                </section>
+
+                <!-- 聚酯 -->
+                <section id="product2">
+                    <h3>聚酯</h3>
+                    <p>聚酯涂料具有较高的光泽度和耐用性，适用于多种行业，具有良好的耐候性和抗氧化性。</p>
+                    <span class="image main"><img src="images/pic03.jpg" alt="聚酯" /></span>
+                </section>
+
+                <!-- 光油 -->
+                <section id="product3">
+                    <h3>光油</h3>
+                    <p>光油涂层具有高光泽效果，提供优异的视觉效果，常用于五金、家具及其它表面涂装领域。</p>
+                    <span class="image main"><img src="images/pic04.jpg" alt="光油" /></span>
+                </section>
+
+                <!-- 仿电镀 -->
+                <section id="product4">
+                    <h3>仿电镀</h3>
+                    <p>仿电镀效果的涂层能够模拟电镀金属的外观，常用于五金产品的表面，具有高装饰性。</p>
+                    <span class="image main"><img src="images/pic05.jpg" alt="仿电镀" /></span>
+                </section>
+
+            </article>
+
+            <!-- Contact -->
+            <article id="contact">
+                <h2 class="major">联系方式</h2>
+                <form method="post" action="#">
+
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="name">姓名</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="field half">
+                            <label for="email">邮箱</label>
+                            <input type="text" name="email" id="email" />
+                        </div>
+                        <div class="field">
+                            <label for="message">留言</label>
+                            <textarea name="message" id="message" rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <ul class="actions">
+                        <li><input type="submit" value="发送留言" class="primary" /></li>
+                        <li><input type="reset" value="重置" /></li>
+                    </ul>
+                </form>
+                <ul class="icons">
+                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
                 </ul>
-            </article>
-
-            <!-- 仿古拉丝页面 -->
-            <article id="仿古拉丝" style="display: none;">
-                <h2 class="major">仿古拉丝</h2>
-                <p>这里是仿古拉丝的详细介绍。</p>
-            </article>
-
-            <!-- 聚酯页面 -->
-            <article id="聚酯" style="display: none;">
-                <h2 class="major">聚酯</h2>
-                <p>这里是聚酯的详细介绍。</p>
-            </article>
-
-            <!-- 光油页面 -->
-            <article id="光油" style="display: none;">
-                <h2 class="major">光油</h2>
-                <p>这里是光油的详细介绍。</p>
-            </article>
-
-            <!-- 仿电镀页面 -->
-            <article id="仿电镀" style="display: none;">
-                <h2 class="major">仿电镀</h2>
-                <p>这里是仿电镀的详细介绍。</p>
             </article>
 
         </div>
