@@ -6,6 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* 设置logo */
+        #logo {
+            position: absolute;  /* 绝对定位 */
+            top: 50%;  /* 垂直居中 */
+            left: 50%;  /* 水平居中 */
+            transform: translate(-50%, -50%);  /* 精确居中 */
+            width: 150px;  /* 设置宽度 */
+            height: auto;  /* 自动调整高度，保持比例 */
+        }
+
+        /* 调整页面背景 */
+        #bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/25新 冰裂 无文字版.png'); /* 更改为您的图片路径 */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -15,7 +39,7 @@
         <!-- Header -->
         <header id="header">
             <div class="logo">
-                <img src="images/logo.png" alt="logo">
+                <img id="logo" src="images/logo.png" alt="调色匠涂料 Logo" />
             </div>
             <div class="content">
                 <div class="inner">
@@ -26,7 +50,7 @@
             <nav>
                 <ul>
                     <li><a href="#intro">公司简介</a></li>
-                    <li><a href="#products">产品介绍</a></li>
+                    <li><a href="#work">产品介绍</a></li>
                     <li><a href="#contact">联系方式</a></li>
                 </ul>
             </nav>
@@ -42,49 +66,53 @@
                 <p>我们位于涂料之乡美誉的广东顺德，拥有工业漆技术研发、生产、质控、销售与技术服务队伍。产品质量稳定，服务周到，检测设备先进。主要生产智能锁漆、仿古艺术铜门漆及五金表面涂装。调色匠遵循诚信经营，稳健发展，品质稳定的经营理念，得到上下游客户广泛认可和信赖，并致力成为五金涂料喷涂行业的优秀供应商。</p>
             </article>
 
-            <!-- Products -->
-            <article id="products">
+            <!-- 产品介绍 -->
+            <article id="work">
                 <h2 class="major">产品介绍</h2>
-                <ul>
-                    <li><a href="#antique-brushed">仿古拉丝</a></li>
-                    <li><a href="#polyester">聚酯</a></li>
-                    <li><a href="#glossy">光油</a></li>
-                    <li><a href="#electroplating">仿电镀</a></li>
-                </ul>
-            </article>
+                <nav>
+                    <ul>
+                        <li><a href="#product1">仿古拉丝</a></li>
+                        <li><a href="#product2">聚酯</a></li>
+                        <li><a href="#product3">光油</a></li>
+                        <li><a href="#product4">仿电镀</a></li>
+                    </ul>
+                </nav>
 
-            <!-- Antique Brushed -->
-            <article id="antique-brushed">
-                <h2 class="major">仿古拉丝</h2>
-                <span class="image main"><img src="images/antique-brushed.jpg" alt="" /></span>
-                <p>仿古拉丝涂料适用于各种五金表面，呈现出优雅的金属质感，广泛应用于门窗、智能锁等产品。</p>
-            </article>
+                <!-- 仿古拉丝 -->
+                <section id="product1">
+                    <h3>仿古拉丝</h3>
+                    <p>仿古拉丝是一种高端的金属表面处理效果，适用于五金制品的表面，能够实现经典的拉丝纹理效果。</p>
+                    <span class="image main"><img src="images/pic02.jpg" alt="仿古拉丝" /></span>
+                </section>
 
-            <!-- Polyester -->
-            <article id="polyester">
-                <h2 class="major">聚酯</h2>
-                <span class="image main"><img src="images/polyester.jpg" alt="" /></span>
-                <p>聚酯涂料具有高耐候性、优异的附着力和抗冲击性，是五金涂装的理想选择。</p>
-            </article>
+                <!-- 聚酯 -->
+                <section id="product2">
+                    <h3>聚酯</h3>
+                    <p>聚酯涂料具有较高的光泽度和耐用性，适用于多种行业，具有良好的耐候性和抗氧化性。</p>
+                    <span class="image main"><img src="images/pic03.jpg" alt="聚酯" /></span>
+                </section>
 
-            <!-- Glossy -->
-            <article id="glossy">
-                <h2 class="major">光油</h2>
-                <span class="image main"><img src="images/glossy.jpg" alt="" /></span>
-                <p>光油涂料能够增强五金表面的光泽度，提供更高的耐磨性和保护性能。</p>
-            </article>
+                <!-- 光油 -->
+                <section id="product3">
+                    <h3>光油</h3>
+                    <p>光油涂层具有高光泽效果，提供优异的视觉效果，常用于五金、家具及其它表面涂装领域。</p>
+                    <span class="image main"><img src="images/pic04.jpg" alt="光油" /></span>
+                </section>
 
-            <!-- Electroplating -->
-            <article id="electroplating">
-                <h2 class="major">仿电镀</h2>
-                <span class="image main"><img src="images/electroplating.jpg" alt="" /></span>
-                <p>仿电镀涂料模拟真实电镀效果，具有出色的金属光泽，适用于各种高端五金产品。</p>
+                <!-- 仿电镀 -->
+                <section id="product4">
+                    <h3>仿电镀</h3>
+                    <p>仿电镀效果的涂层能够模拟电镀金属的外观，常用于五金产品的表面，具有高装饰性。</p>
+                    <span class="image main"><img src="images/pic05.jpg" alt="仿电镀" /></span>
+                </section>
+
             </article>
 
             <!-- Contact -->
             <article id="contact">
                 <h2 class="major">联系方式</h2>
                 <form method="post" action="#">
+
                     <div class="fields">
                         <div class="field half">
                             <label for="name">姓名</label>
@@ -99,18 +127,27 @@
                             <textarea name="message" id="message" rows="4"></textarea>
                         </div>
                     </div>
+
                     <ul class="actions">
                         <li><input type="submit" value="发送留言" class="primary" /></li>
                         <li><input type="reset" value="重置" /></li>
                     </ul>
                 </form>
+                <ul class="icons">
+                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
             </article>
+
         </div>
 
         <!-- Footer -->
         <footer id="footer">
             <p class="copyright">&copy; 佛山市顺德区调色匠化工涂料有限公司. 联系方式: 电话：13054429476 | 邮箱：xgl13054429476@outlook.com</p>
         </footer>
+
     </div>
 
     <!-- BG -->
@@ -122,5 +159,6 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
 </body>
 </html>
